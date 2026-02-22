@@ -1,0 +1,46 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#f4f7fb;color:#222;}
+.navbar{background:linear-gradient(to right,#003b80,#0066cc);padding:15px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:999;box-shadow:0px 3px 8px rgba(0,0,0,0.2);}
+.logo-area{display:flex;align-items:center;gap:12px;}
+.logo-area img{width:50px;height:50px;object-fit:contain;}
+.logo-area h1{font-size:20px;font-weight:bold;color:white;}
+.navbar nav{display:flex;gap:20px;}
+.navbar nav a{text-decoration:none;color:white;font-weight:bold;padding:8px 12px;border-radius:8px;transition:0.3s;}
+.navbar nav a:hover{background:rgba(255,255,255,0.2);}
+.navbar nav a.active{background:rgba(255,255,255,0.3);}
+
+.hero{height:70vh;background:url("ak.jpg") no-repeat center center/cover;position:relative;display:flex;align-items:center;padding:0 60px;}
+.hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.6);}
+.hero-content{position:relative;max-width:700px;color:white;z-index:2;}
+.hero-content h2{font-size:45px;margin-bottom:15px;}
+.hero-content p{font-size:18px;line-height:1.6;margin-bottom:25px;}
+
+.btn{display:inline-block;background:#ffcc00;color:#003b80;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:bold;transition:0.3s;}
+.btn:hover{background:white;color:#003b80;}
+
+.about{width:85%;margin:auto;padding:70px 0 30px;text-align:center;}
+.about h2{font-size:35px;color:#003b80;margin-bottom:15px;}
+.about p{font-size:16px;color:#444;line-height:1.8;}
+
+.info{width:90%;margin:auto;padding:40px 0 60px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
+.card{background:white;padding:30px;border-radius:20px;box-shadow:0px 6px 18px rgba(0,0,0,0.1);transition:0.3s;border-top:6px solid #ffcc00;}
+.card:hover{transform:translateY(-8px);box-shadow:0px 12px 25px rgba(0,0,0,0.15);}
+.card h3{font-size:22px;color:#003b80;margin-bottom:12px;}
+.card p{font-size:15px;color:#444;line-height:1.7;}
+
+.skills{background:#eef3fa;padding:70px 20px;text-align:center;}
+.skills h2{font-size:35px;color:#003b80;margin-bottom:30px;}
+.skill-list{width:80%;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px;}
+.skill{background:white;padding:18px;border-radius:15px;box-shadow:0px 4px 10px rgba(0,0,0,0.1);font-weight:bold;color:#003b80;transition:0.3s;}
+.skill:hover{transform:scale(1.03);}
+
+.footer{background:#003b80;color:white;text-align:center;padding:25px;font-size:14px;}
+
+@media(max-width:768px){
+.navbar{flex-direction:column;gap:15px;}
+.navbar nav{flex-wrap:wrap;justify-content:center;}
+.hero{padding:0 20px;text-align:center;}
+.hero-content h2{font-size:32px;}
+.hero-content p{font-size:15px;}
+}
