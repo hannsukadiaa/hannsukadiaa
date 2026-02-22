@@ -1,448 +1,144 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HannSukaDiaa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMKN Kalibaru</title>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background: #f4f7fb;
-      color: #222;
-    }
-
-    header {
-      background: linear-gradient(90deg, #0b2d66, #0d5aa7);
-      color: white;
-      padding: 15px 40px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo img {
-      width: 45px;
-      height: 45px;
-    }
-
-    .logo h1 {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
-
-    .hero {
-      height: 90vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-    }
-
-    .hero-content {
-      position: relative;
-      text-align: center;
-      color: white;
-      max-width: 900px;
-      padding: 20px;
-    }
-
-    .hero-content h2 {
-      font-size: 45px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    .hero-content p {
-      font-size: 18px;
-      margin-bottom: 25px;
-      line-height: 1.5;
-    }
-
-    .hero-content a {
-      text-decoration: none;
-      background: #ffcc00;
-      color: #0b2d66;
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .hero-content a:hover {
-      background: white;
-      color: #0b2d66;
-    }
-
-    section {
-      padding: 60px 40px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title h2 {
-      font-size: 32px;
-      color: #0b2d66;
-    }
-
-    .section-title p {
-      color: #444;
-      margin-top: 10px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #0b2d66;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .news {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .news-item {
-      background: white;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-
-    .news-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .news-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .news-item .news-content {
-      padding: 20px;
-    }
-
-    .news-item h4 {
-      color: #0b2d66;
-      margin-bottom: 10px;
-    }
-
-    .news-item p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    footer {
-      background: #0b2d66;
-      color: white;
-      padding: 30px 40px;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    footer p {
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
-    /* Responsive */
-    @media(max-width: 768px) {
-      nav ul {
-        display: none;
-      }
-
-      .hero-content h2 {
-        font-size: 30px;
-      }
-
-      .hero-content p {
-        font-size: 15px;
-      }
-    }
-  </style>
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="navbar">
-      <div class="logo">
-        <img src="smk.jpg" alt="Logo SMK">
-        <h1>SMKN KALIBARU</h1>
-      </div>
-
-      <nav>
-        <ul>
-          <li><a href="#beranda">Beranda</a></li>
-          <li><a href="#profil">Profil</a></li>
-          <li><a href="#jurusan">Jurusan</a></li>
-          <li><a href="#berita">Berita</a></li>
-          <li><a href="#kontak">Kontak</a></li>
-        </ul>
-      </nav>
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <img src="smk.jpg" alt="Logo">
+      <h1>SMKN KALIBARU</h1>
     </div>
-  </header>
 
-  <!-- HERO -->
-  <div class="hero" id="beranda">
-    <div class="hero-content">
-      <h2>Selamat Datang di SMKN Kalibaru</h2>
-      <p>
-        Sekolah Menengah Kejuruan yang unggul dalam bidang teknologi, bisnis, dan industri.
-        Membentuk generasi siap kerja, siap kuliah, dan siap berwirausaha.
-      </p>
-      <a href="#profil">Lihat Profil Sekolah</a>
+    <div class="hamburger" id="hamburger">
+      ☰
     </div>
+
+    <nav id="navMenu">
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#jurusan">Jurusan</a></li>
+        <li><a href="#berita">Berita</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="beranda">
+  <div class="hero-content">
+    <h2>Selamat Datang di SMKN Kalibaru</h2>
+    <p>Sekolah unggulan yang mencetak generasi siap kerja, siap kuliah dan siap berwirausaha.</p>
+    <a href="#profil" class="btn">Lihat Profil</a>
+  </div>
+</section>
+
+<!-- PROFIL -->
+<section id="profil">
+  <div class="section-title">
+    <h2>Profil Sekolah</h2>
   </div>
 
-  <!-- PROFIL -->
-  <section id="profil">
-    <div class="section-title">
-      <h2>Profil Sekolah</h2>
-      <p>Mengenal SMKN Kalibaru lebih dekat</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Visi</h3>
+      <p>Menjadi SMK unggul berkarakter dan kompeten di dunia industri modern.</p>
     </div>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Visi</h3>
-        <p>
-          Menjadi SMK unggul yang menghasilkan lulusan berkarakter, kompeten,
-          dan siap bersaing di dunia industri dan teknologi.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Misi</h3>
-        <p>
-          Meningkatkan kompetensi siswa melalui pembelajaran modern,
-          membangun budaya disiplin, serta memperkuat kerja sama dengan DU/DI.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Tujuan</h3>
-        <p>
-          Menghasilkan lulusan profesional, berintegritas, dan mampu menghadapi
-          tantangan era digital.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- JURUSAN -->
-  <section id="jurusan" style="background:#eef3fa;">
-    <div class="section-title">
-      <h2>Kompetensi Keahlian</h2>
-      <p>Jurusan yang tersedia di SMKN Kalibaru</p>
+    <div class="card">
+      <h3>Misi</h3>
+      <p>Meningkatkan kualitas pembelajaran berbasis teknologi dan industri.</p>
     </div>
 
-    <a href="tkj.html" style="text-decoration:none;">
-  <div class="card">
-    <h3>TKJ</h3>
-    <p>Teknik Komputer dan Jaringan, mempelajari jaringan komputer, server, dan keamanan jaringan.</p>
+    <div class="card">
+      <h3>Tujuan</h3>
+      <p>Mencetak lulusan profesional, kreatif dan siap bersaing global.</p>
+    </div>
   </div>
-    </a>
+</section>
 
-     <a href="ak.html" style="text-decoration:none;">
-      <div class="card">
-        <h3>AK</h3>
-        <p>Akuntansi, proses.</p>
-      </div>
-     </a>
+<!-- JURUSAN -->
+<section id="jurusan" class="bg-soft">
+  <div class="section-title">
+    <h2>Kompetensi Keahlian</h2>
+  </div>
 
-      <a href="tkr.html" style="text-decoration:none;">
-      <div class="card">
-        <h3>TKR</h3>
-        <p>Teknik Kendaraan Ringan, proses.</p>
-      </div>
-      </a>
+  <div class="cards">
+    <div class="card"> <h3>TKJ</h3> <p>Teknik Komputer & Jaringan</p> </div>
+    <div class="card"> <h3>AK</h3> <p>Akuntansi</p> </div>
+    <div class="card"> <h3>TKR</h3> <p>Teknik Kendaraan Ringan</p> </div>
+    <div class="card"> <h3>APHP</h3> <p>Agribisnis Pengolahan Hasil Pertanian</p> </div>
+    <div class="card"> <h3>ATU</h3> <p>Agribisnis Ternak Unggas</p> </div>
+    <div class="card"> <h3>ATR</h3> <p>Agribisnis Ternak Ruminansia</p> </div>
+  </div>
+</section>
 
-      <a href="aphp.html" style="text-decoration:none;">
-      <div class="card">
-        <h3>APHP</h3>
-        <p>Agribisnis Pengolahan Hasil Pertanian, mempelajari digital marketing, e-commerce, dan strategi bisnis online.</p>
-      </div>
-      </a>
+<!-- BERITA -->
+<section id="berita">
+  <div class="section-title">
+    <h2>Berita Terbaru</h2>
+  </div>
 
-      <a href="atu.html" style="text-decoration:none;">
-      <div class="card">
-	<h3>ATU</h3>
-	<p>Agribisnis Ternak Unggas, bentar. </p>
-      </div>
-      </a>
-
-      <a href="atr.html" style"text-decoration:none;">
-      <div class="card">
-	<h3>ATR</h3>
-	<p>Agribisnis Ternak Ruminansia, bentar. </p>
-      </div>
-      </a>
-
-      <a href="apat.html" style"text-decoration:none;">
-      <div class="card">
-	<h3>APAT</h3>
-	<p>Agrribisnis Peternakan Air Tawar, bentar. </p>
-      </div>	
-      </a>
-    </div>
-  </section>
-
-  <!-- BERITA -->
-  <section id="berita">
-    <div class="section-title">
-      <h2>Berita Terbaru</h2>
-      <p>Informasi terbaru kegiatan sekolah</p>
+  <div class="cards">
+    <div class="card news">
+      <h3>Ujian Kompetensi</h3>
+      <p>Siswa mengikuti UKK sebagai syarat kelulusan.</p>
     </div>
 
-    <div class="news">
-      <div class="news-item">
-        <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1600&q=80" alt="Berita">
-        <div class="news-content">
-          <h4>Pelaksanaan Ujian Kompetensi Keahlian (UKK)</h4>
-          <p>Siswa SMKN Kalibaru mengikuti UKK sebagai bentuk pengujian kompetensi sebelum lulus.</p>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=80" alt="Berita">
-        <div class="news-content">
-          <h4>Kunjungan Industri DU/DI</h4>
-          <p>Kegiatan kunjungan industri untuk mengenalkan dunia kerja secara langsung kepada siswa.</p>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80" alt="Berita">
-        <div class="news-content">
-          <h4>Pelatihan Digital & Networking</h4>
-          <p>Workshop jaringan dan teknologi terbaru untuk meningkatkan skill siswa bidang IT.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- KONTAK -->
-  <section id="kontak" style="background:#eef3fa;">
-    <div class="section-title">
-      <h2>Kontak Sekolah</h2>
-      <p>Hubungi kami untuk informasi lebih lanjut</p>
+    <div class="card news">
+      <h3>Kunjungan Industri</h3>
+      <p>Mengenal dunia kerja secara langsung.</p>
     </div>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Alamat</h3>
-        <p>SMKN Kalibaru, Banyuwangi, Jawa Timur</p>
-      </div>
-
-      <div class="card">
-        <h3>Email</h3>
-        <p>info@smknkalibaru.sch.id</p>
-      </div>
-
-      <div class="card">
-        <h3>Telepon</h3>
-        <p>(0333) 123456</p>
-      </div>
+    <div class="card news">
+      <h3>Workshop Digital</h3>
+      <p>Pelatihan teknologi & networking terbaru.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 SMKN Kalibaru | Dibuat untuk adalah pokonya</p>
-  </footer>
+<!-- KONTAK -->
+<section id="kontak" class="bg-soft">
+  <div class="section-title">
+    <h2>Kontak Kami</h2>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Alamat</h3>
+      <p>Kalibaru, Banyuwangi, Jawa Timur</p>
+    </div>
+
+    <div class="card">
+      <h3>Email</h3>
+      <p>info@smknkalibaru.sch.id</p>
+    </div>
+
+    <div class="card">
+      <h3>Telepon</h3>
+      <p>(0333) 123456</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 SMKN Kalibaru</p>
+</footer>
 
 <script>
-  const hero = document.querySelector(".hero");
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
 
-  const images = [
-    "/img1.jpg",
-    "/img2.jpg",
-    "/img3.jpg"
-  ];
-
-  let index = 0;
-
-  function changeHero() {
-    hero.style.backgroundImage = `url('${images[index]}')`;
-    index = (index + 1) % images.length;
-  }
-
-  changeHero();
-  setInterval(changeHero, 3000);
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
 </script>
 
 </body>
