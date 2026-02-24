@@ -1,124 +1,57 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMKN Kalibaru</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN Kalibaru</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Floating Background -->
-<div class="floating one"></div>
-<div class="floating two"></div>
-
 <header>
-  <div class="navbar">
     <div class="logo">
-      <img src="smk.jpg" alt="Logo">
-      <h1>SMKN KALIBARU</h1>
+        <img src="logo.png" alt="Logo">
+        <h1>SMKN Kalibaru</h1>
     </div>
 
-    <div class="hamburger" id="hamburger">☰</div>
-
-    <nav id="navMenu">
-      <ul>
-        <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#profil">Profil</a></li>
-        <li><a href="#jurusan">Jurusan</a></li>
-        <li><a href="#berita">Berita</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Profil</a>
+        <a href="#">Jurusan</a>
+        <a href="#">Kontak</a>
     </nav>
-  </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="beranda">
-  <div class="hero-content">
-    <h2>Selamat Datang di SMKN Kalibaru</h2>
-    <p>Sekolah unggulan yang mencetak generasi siap kerja, siap kuliah dan siap berwirausaha.</p>
-    <a href="#profil" class="btn">Jelajahi Sekolah</a>
-  </div>
+<section class="hero">
+    <div class="hero-content">
+        <h2>Selamat Datang di SMKN Kalibaru</h2>
+        <p>Sekolah unggulan yang mencetak generasi siap kerja, siap kuliah dan siap berwirausaha.</p>
+        <a href="#" class="btn">Jelajahi Sekolah</a>
+    </div>
 </section>
 
-<!-- PROFIL -->
-<section id="profil">
-  <div class="section-title">
-    <h2>Profil Sekolah</h2>
-  </div>
-  <div class="cards">
-    <div class="card"><h3>Visi</h3><p>Menjadi SMK unggul dan kompeten di dunia industri modern.</p></div>
-    <div class="card"><h3>Misi</h3><p>Meningkatkan pembelajaran berbasis teknologi dan industri.</p></div>
-    <div class="card"><h3>Tujuan</h3><p>Mencetak lulusan profesional, kreatif dan berkarakter.</p></div>
-  </div>
-</section>
+<section class="info">
+    <div class="card">
+        <h3>Email</h3>
+        <p>info@smknkalibaru.sch.id</p>
+    </div>
 
-<!-- JURUSAN -->
-<section id="jurusan" class="bg-soft">
-  <div class="section-title">
-    <h2>Kompetensi Keahlian</h2>
-  </div>
-  <div class="cards">
-    <div class="card"><h3>TKJ</h3><p>Teknik Komputer & Jaringan</p></div>
-    <div class="card"><h3>AK</h3><p>Akuntansi</p></div>
-    <div class="card"><h3>TKR</h3><p>Teknik Kendaraan Ringan</p></div>
-    <div class="card"><h3>APHP</h3><p>Agribisnis Pengolahan Hasil Pertanian</p></div>
-    <div class="card"><h3>ATU</h3><p>Agribisnis Ternak Unggas</p></div>
-    <div class="card"><h3>ATR</h3><p>Agribisnis Ternak Ruminansia</p></div>
-  </div>
-</section>
+    <div class="card">
+        <h3>Telepon</h3>
+        <p>(0333) 123456</p>
+    </div>
 
-<!-- BERITA -->
-<section id="berita">
-  <div class="section-title">
-    <h2>Berita Terbaru</h2>
-  </div>
-  <div class="cards">
-    <div class="card"><h3>Ujian Kompetensi</h3><p>Pelaksanaan UKK sebagai syarat kelulusan siswa.</p></div>
-    <div class="card"><h3>Kunjungan Industri</h3><p>Siswa mengenal dunia kerja secara langsung.</p></div>
-    <div class="card"><h3>Workshop Digital</h3><p>Pelatihan networking & teknologi terbaru.</p></div>
-  </div>
-</section>
-
-<!-- KONTAK -->
-<section id="kontak" class="bg-soft">
-  <div class="section-title">
-    <h2>Kontak Kami</h2>
-  </div>
-  <div class="cards">
-    <div class="card"><h3>Alamat</h3><p>Kalibaru, Banyuwangi, Jawa Timur</p></div>
-    <div class="card"><h3>Email</h3><p>info@smknkalibaru.sch.id</p></div>
-    <div class="card"><h3>Telepon</h3><p>(0333) 123456</p></div>
-  </div>
+    <div class="card">
+        <h3>Alamat</h3>
+        <p>Kalibaru, Banyuwangi, Jawa Timur</p>
+    </div>
 </section>
 
 <footer>
-  <p>© 2026 SMKN Kalibaru</p>
+    © 2026 SMKN Kalibaru
 </footer>
 
-<script>
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
-
-/* Scroll Reveal */
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-},{threshold:0.2});
-
-document.querySelectorAll(".card, .section-title").forEach(el=>{
-  el.classList.add("hidden");
-  observer.observe(el);
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
